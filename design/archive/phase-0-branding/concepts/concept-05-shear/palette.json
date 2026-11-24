@@ -1,0 +1,38 @@
+{
+  "concept": "Concept 05",
+  "name": "Shear",
+  "palette": "Silver & Ember",
+  "colors": [
+    {
+      "name": "Ink",
+      "hex": "#121316"
+    },
+    {
+      "name": "Graphite",
+      "hex": "#25282E"
+    },
+    {
+      "name": "Steel",
+      "hex": "#878D97"
+    },
+    {
+      "name": "Silver",
+      "hex": "#D3D7DD"
+    },
+    {
+      "name": "Paper",
+      "hex": "#FBFBFC"
+    },
+    {
+      "name": "Ember",
+      "hex": "#FF5A2C"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#FBFBFC",
+    "bottom": "#D3D7DD"
+  },
+  "wordmark_typeface": [
+    "Inter 600"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "concept": "Concept 08",
+  "name": "Interlink",
+  "palette": "Lagoon & Coral",
+  "colors": [
+    {
+      "name": "Ink",
+      "hex": "#1D2326"
+    },
+    {
+      "name": "Lagoon Deep",
+      "hex": "#087567"
+    },
+    {
+      "name": "Lagoon",
+      "hex": "#0B9A8A"
+    },
+    {
+      "name": "Lagoon Light",
+      "hex": "#2CC7B3"
+    },
+    {
+      "name": "Coral",
+      "hex": "#FF6B4A"
+    },
+    {
+      "name": "Porcelain",
+      "hex": "#F8F8F6"
+    },
+    {
+      "name": "Fog",
+      "hex": "#DFE2E0"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#F8F8F6",
+    "bottom": "#DFE2E0"
+  },
+  "wordmark_typeface": [
+    "Sora 600"
+  ]
+}

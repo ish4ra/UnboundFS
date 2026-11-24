@@ -1,0 +1,39 @@
+{
+  "concept": "Concept 06",
+  "name": "Loose Leaf",
+  "palette": "Ink Violet & Vellum",
+  "colors": [
+    {
+      "name": "Ink Violet",
+      "hex": "#141220"
+    },
+    {
+      "name": "Dusk",
+      "hex": "#2D2846"
+    },
+    {
+      "name": "Violet",
+      "hex": "#7B5CF5"
+    },
+    {
+      "name": "Violet Deep",
+      "hex": "#6A50E6"
+    },
+    {
+      "name": "Lilac",
+      "hex": "#B3A0FF"
+    },
+    {
+      "name": "Vellum",
+      "hex": "#EEE9FF"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#2D2846",
+    "bottom": "#141220"
+  },
+  "wordmark_typeface": [
+    "Fraunces 400",
+    "Fraunces 600"
+  ]
+}
