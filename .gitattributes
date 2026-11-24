@@ -1,0 +1,2 @@
+# Design archives are reference material, not part of releases.
+design/archive/** export-ignore
