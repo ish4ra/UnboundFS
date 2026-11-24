@@ -1,0 +1,53 @@
+{
+  "name": "UnboundFS \u2014 Shear (Silver & Ember)",
+  "status": "approved by the project owner",
+  "colors": [
+    {
+      "name": "Ink",
+      "hex": "#121316"
+    },
+    {
+      "name": "Graphite",
+      "hex": "#25282E"
+    },
+    {
+      "name": "Steel",
+      "hex": "#878D97"
+    },
+    {
+      "name": "Silver",
+      "hex": "#D3D7DD"
+    },
+    {
+      "name": "Paper",
+      "hex": "#FBFBFC"
+    },
+    {
+      "name": "Ember",
+      "hex": "#FF5A2C"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#FBFBFC",
+    "bottom": "#D3D7DD"
+  },
+  "reversed_artwork_tints": [
+    {
+      "name": "Reversed upper",
+      "hex": "#F1F2F4"
+    },
+    {
+      "name": "Reversed lower",
+      "hex": "#8C929C"
+    },
+    {
+      "name": "Reversed ember",
+      "hex": "#FF6A3D"
+    }
+  ],
+  "primary_accent": "Ember",
+  "typeface": {
+    "wordmark": "Inter SemiBold, uppercase, tracking +0.12 em",
+    "ui": "System font (SF Pro)"
+  }
+}
