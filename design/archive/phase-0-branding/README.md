@@ -1,8 +1,10 @@
 # UnboundFS — Phase 0 brand concepts
 
-> **Status: exploration only. No concept has been selected.** The final logo, app icon and
-> application colour theme are waiting on the project owner's decision. Application development
-> has not started.
+> **Archive.** The project owner selected **Concept 05 — Shear (Silver & Ember)** as the official
+> UnboundFS identity. The production assets live in [`design/brand/`](../../brand/). This folder preserves
+> the complete Phase 0 exploration for reference; the seven other concepts are not part of the identity
+> and must not be bundled with application releases. The original, unmodified collection is also on the
+> [`archive/phase-0-branding`](https://github.com/ish4ra/UnboundFS/tree/archive/phase-0-branding) branch.
 
 Eight original logo and app icon directions for **UnboundFS**, *Storage without boundaries.*
 
@@ -20,7 +22,7 @@ Eight original logo and app icon directions for **UnboundFS**, *Storage without 
 | 02 | **Unfolded** | Midnight & Cyan | [board](previews/concept-02-unfolded.png) · [files](concepts/concept-02-unfolded/) | `#0A1530`, `#15264D`, `#33528F`, `#6F8CCB`, `#3DD6EB`, `#0BA3BF`, `#D3F4FA` |
 | 03 | **Refract** | Charcoal & Electric Blue | [board](previews/concept-03-refract.png) · [files](concepts/concept-03-refract/) | `#111216`, `#272A32`, `#4A4F5A`, `#C3C8D1`, `#E8EBF0`, `#4A86FF`, `#2F6BF0` |
 | 04 | **Keystone** | Basalt & Copper | [board](previews/concept-04-keystone.png) · [files](concepts/concept-04-keystone/) | `#2C2724`, `#5A4F48`, `#DED3C3`, `#F4EFE7`, `#C4643A`, `#E08657` |
-| 05 | **Shear** | Silver & Ember | [board](previews/concept-05-shear.png) · [files](concepts/concept-05-shear/) | `#121316`, `#25282E`, `#878D97`, `#D3D7DD`, `#FBFBFC`, `#FF5A2C` |
+| 05 | **Shear** ✅ *selected* | Silver & Ember | [board](previews/concept-05-shear.png) · [files](concepts/concept-05-shear/) | `#121316`, `#25282E`, `#878D97`, `#D3D7DD`, `#FBFBFC`, `#FF5A2C` |
 | 06 | **Loose Leaf** | Ink Violet & Vellum | [board](previews/concept-06-loose-leaf.png) · [files](concepts/concept-06-loose-leaf/) | `#141220`, `#2D2846`, `#7B5CF5`, `#6A50E6`, `#B3A0FF`, `#EEE9FF` |
 | 07 | **Pathfinder** | Forest & Saffron | [board](previews/concept-07-pathfinder.png) · [files](concepts/concept-07-pathfinder/) | `#0A1F1A`, `#123A31`, `#184A3E`, `#9DBDB1`, `#E6F0EB`, `#F4B637`, `#D9900F` |
 | 08 | **Interlink** | Lagoon & Coral | [board](previews/concept-08-interlink.png) · [files](concepts/concept-08-interlink/) | `#1D2326`, `#087567`, `#0B9A8A`, `#2CC7B3`, `#FF6B4A`, `#F8F8F6`, `#DFE2E0` |
@@ -32,6 +34,11 @@ Eight original logo and app icon directions for **UnboundFS**, *Storage without 
 | [previews/dock.png](previews/dock.png) | All icons in a Dock, light and dark desktops |
 | [previews/menubar.png](previews/menubar.png) | Monochrome template glyphs in light and dark menu bars (Retina 2×) |
 | [previews/small-sizes.png](previews/small-sizes.png) | 128/64/32/16 px rasters, magnified to show real pixels |
+
+## Also in this archive
+
+- [rejected/](rejected/): variants explored and replaced during Phase 0, reconstructed from the session's geometry
+- [FONTS.md](FONTS.md): typefaces used for the concept wordmarks, with their SIL OFL copyright notices
 
 ## The concepts
 
@@ -122,7 +129,7 @@ App icon background: `#F4EFE7` → `#DED3C3` · Wordmark: Outfit 400, Outfit 600
 
 Files: [`concepts/concept-04-keystone/`](concepts/concept-04-keystone/)
 
-### Concept 05 — Shear
+### Concept 05 — Shear (selected by the owner)
 
 <img src="concepts/concept-05-shear/png/app-icon-256.png" width="128" alt="Shear app icon"> <img src="concepts/concept-05-shear/png/symbol-1024.png" width="128" alt="Shear symbol">
 

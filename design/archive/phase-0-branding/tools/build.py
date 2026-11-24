@@ -18,6 +18,7 @@ from svgkit import (app_icon_svg, app_icon_inner, symbol_svg, symbol_markup, wor
 
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
+SELECTED = 5  # Concept 05 Shear, selected by the project owner
 BUILD = os.environ.get("UNBOUND_BUILD_DIR", os.path.join(TOOLS, ".build"))
 ICON_SIZES = [16, 32, 64, 128, 256, 512, 1024]
 
@@ -350,7 +351,8 @@ def gallery_body():
         pngs[c["num"]] = {s: data_uri(os.path.join(p, f"app-icon-{s}.png")) for s in (16, 32)}
 
     overview = "".join(
-        f'<a class="ov" href="#c{c["num"]:02d}"><span class="ov-num">{c["num"]:02d}</span>'
+        f'<a class="ov{" ov-sel" if c["num"] == SELECTED else ""}" href="#c{c["num"]:02d}"><span class="ov-num">{c["num"]:02d}</span>'
+        + ('<span class="sel-badge">Selected</span>' if c["num"] == SELECTED else "") +
         f'{inline_icon(c, f"g-ov{c["num"]}", 168)}<span class="ov-name">{html.escape(c["name"])}</span>'
         f'<span class="ov-pal">{html.escape(c["palette_name"])}</span></a>' for c in CONCEPTS)
 
@@ -373,7 +375,7 @@ def gallery_body():
         fonts = ", ".join(sorted({font_label(k) for _, k, _ in c["font"]}))
         details.append(f"""
 <section class="concept" id="c{c['num']:02d}">
- <header class="c-head"><span class="c-num">Concept {c['num']:02d}</span><h2>{html.escape(c['name'])}</h2>
+ <header class="c-head"><span class="c-num">Concept {c['num']:02d}</span><h2>{html.escape(c['name'])}</h2>{'<span class="sel-badge inline">Selected by owner</span>' if c['num'] == SELECTED else ''}
   <span class="c-pal">{html.escape(c['palette_name'])}</span></header>
  <p class="c-sym">{html.escape(c['symbolism'])}</p>
  <div class="c-grid">
@@ -406,8 +408,11 @@ def gallery_body():
 <header class="hero"><div class="wrap">
  <p class="eyebrow">UnboundFS &middot; Phase 0 &middot; Brand identity review</p>
  <h1>Eight directions for a filesystem utility that crosses platforms.</h1>
+ <div class="selected-banner"><a href="#c05">{inline_icon(next(c for c in CONCEPTS if c["num"] == SELECTED), "g-selb", 56, False)}</a>
+  <div><b>Selected by the project owner: Concept 05 &mdash; Shear (Silver &amp; Ember).</b>
+  <span>This page is now an archive of the Phase 0 exploration. The production identity lives in <code>design/brand/</code>; the other seven concepts are kept for reference only.</span></div></div>
  <p class="lede">Each concept has an app icon, a standalone symbol, light, dark and monochrome versions, a menu bar template,
- a wordmark and its own palette. Nothing here is final: the owner picks the direction, and refinements follow from that choice.</p>
+ a wordmark and its own palette.</p>
  <div class="hero-actions"><button id="themeBtn" type="button" class="btn">Switch to dark</button>
  <a class="btn ghost" href="#overview">Overview</a><a class="btn ghost" href="#dock">Dock</a><a class="btn ghost" href="#menubar">Menu bar</a>
  <a class="btn ghost" href="#palettes">Palettes</a><a class="btn ghost" href="#wordmarks">Wordmarks</a></div>
@@ -425,11 +430,11 @@ def gallery_body():
   <p class="cap">Palettes belong to their concept. The application colour theme is decided only after a concept is approved.</p></section>
  <section id="wordmarks"><h3 class="sec">Wordmarks compared</h3><div class="wm-list">{wms}</div>
   <p class="cap">All lettering is converted to outlines from SIL Open Font License typefaces, so it renders the same everywhere.</p></section>
- <section id="shortlist"><h3 class="sec">Reviewer shortlist (advisory)</h3>
+ <section id="shortlist"><h3 class="sec">Reviewer shortlist at the time (advisory)</h3>
   <ol class="sl">{shortlist}</ol>
-  <p class="cap">A suggestion only. All eight concepts stay open, and the decision belongs to the project owner.</p></section>
+  <p class="cap">This was a suggestion only. The owner selected Concept 05 Shear.</p></section>
 </main>
-<footer class="wrap foot">UnboundFS brand concepts &middot; Phase 0 &middot; awaiting owner selection. Application development has not started.</footer>
+<footer class="wrap foot">UnboundFS brand concepts &middot; Phase 0 archive &middot; Concept 05 Shear selected by the owner.</footer>
 """
 
 
@@ -459,6 +464,12 @@ section{padding-block:28px}
 .ov-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .ov{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 12px 16px;display:flex;flex-direction:column;align-items:center;gap:4px;color:inherit;text-decoration:none;position:relative}
 .ov svg{max-width:100%;height:auto}
+.ov-sel{border:2px solid #FF5A2C}
+.sel-badge{position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;letter-spacing:.04em;background:#FF5A2C;color:#121316;border-radius:999px;padding:2px 9px}
+.sel-badge.inline{position:static;align-self:center}
+.selected-banner{display:flex;gap:14px;align-items:center;margin-top:20px;padding:14px 16px;border-radius:16px;background:var(--card);border:2px solid #FF5A2C;max-width:760px}
+.selected-banner span{display:block;color:var(--muted);margin-top:2px}
+.selected-banner code{font-family:var(--mono);font-size:.92em}
 .ov-num{position:absolute;top:12px;left:14px;font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
 .ov-name{font-weight:700;font-size:17px} .ov-pal{color:var(--muted);font-size:12px}
 .dk-wall{background:var(--wall);border-radius:18px;padding:90px 12px 18px;display:flex;justify-content:center;overflow-x:auto}
@@ -552,14 +563,14 @@ def build_readme():
         d = rel(cdir(c))
         prev = f"previews/concept-{c['num']:02d}-{c['slug']}.png"
         hexes = ", ".join(f"`{h}`" for _, h in c["palette"])
-        rows.append(f"| {c['num']:02d} | **{c['name']}** | {c['palette_name']} | [board]({prev}) · [files]({d}/) | {hexes} |")
+        rows.append(f"| {c['num']:02d} | **{c['name']}**{" ✅ *selected*" if c['num'] == SELECTED else ""} | {c['palette_name']} | [board]({prev}) · [files]({d}/) | {hexes} |")
     sections = []
     for c in CONCEPTS:
         d = rel(cdir(c))
         prev = f"previews/concept-{c['num']:02d}-{c['slug']}.png"
         pal = "\n".join(f"| {n} | `{h}` |" for n, h in c["palette"])
         fonts = ", ".join(sorted({font_label(k) for _, k, _ in c["font"]}))
-        sections.append(f"""### Concept {c['num']:02d} — {c['name']}
+        sections.append(f"""### Concept {c['num']:02d} — {c['name']}{" (selected by the owner)" if c['num'] == SELECTED else ""}
 
 <img src="{d}/png/app-icon-256.png" width="128" alt="{c['name']} app icon"> <img src="{d}/png/symbol-1024.png" width="128" alt="{c['name']} symbol">
 
@@ -577,9 +588,11 @@ Files: [`{d}/`]({d}/)
 """)
     text = f"""# UnboundFS — Phase 0 brand concepts
 
-> **Status: exploration only. No concept has been selected.** The final logo, app icon and
-> application colour theme are waiting on the project owner's decision. Application development
-> has not started.
+> **Archive.** The project owner selected **Concept 05 — Shear (Silver & Ember)** as the official
+> UnboundFS identity. The production assets live in [`design/brand/`](../../brand/). This folder preserves
+> the complete Phase 0 exploration for reference; the seven other concepts are not part of the identity
+> and must not be bundled with application releases. The original, unmodified collection is also on the
+> [`archive/phase-0-branding`](https://github.com/ish4ra/UnboundFS/tree/archive/phase-0-branding) branch.
 
 Eight original logo and app icon directions for **UnboundFS**, *Storage without boundaries.*
 
@@ -602,6 +615,11 @@ Eight original logo and app icon directions for **UnboundFS**, *Storage without 
 | [previews/dock.png](previews/dock.png) | All icons in a Dock, light and dark desktops |
 | [previews/menubar.png](previews/menubar.png) | Monochrome template glyphs in light and dark menu bars (Retina 2×) |
 | [previews/small-sizes.png](previews/small-sizes.png) | 128/64/32/16 px rasters, magnified to show real pixels |
+
+## Also in this archive
+
+- [rejected/](rejected/): variants explored and replaced during Phase 0, reconstructed from the session's geometry
+- [FONTS.md](FONTS.md): typefaces used for the concept wordmarks, with their SIL OFL copyright notices
 
 ## The concepts
 
