@@ -1,0 +1,42 @@
+{
+  "concept": "Concept 03",
+  "name": "Refract",
+  "palette": "Charcoal & Electric Blue",
+  "colors": [
+    {
+      "name": "Charcoal",
+      "hex": "#111216"
+    },
+    {
+      "name": "Carbon",
+      "hex": "#272A32"
+    },
+    {
+      "name": "Seam",
+      "hex": "#4A4F5A"
+    },
+    {
+      "name": "Ash",
+      "hex": "#C3C8D1"
+    },
+    {
+      "name": "Frost",
+      "hex": "#E8EBF0"
+    },
+    {
+      "name": "Electric",
+      "hex": "#4A86FF"
+    },
+    {
+      "name": "Electric Deep",
+      "hex": "#2F6BF0"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#272A32",
+    "bottom": "#111216"
+  },
+  "wordmark_typeface": [
+    "Inter Display 600"
+  ]
+}

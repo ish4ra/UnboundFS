@@ -1,0 +1,43 @@
+{
+  "concept": "Concept 07",
+  "name": "Pathfinder",
+  "palette": "Forest & Saffron",
+  "colors": [
+    {
+      "name": "Forest Ink",
+      "hex": "#0A1F1A"
+    },
+    {
+      "name": "Forest",
+      "hex": "#123A31"
+    },
+    {
+      "name": "Pine",
+      "hex": "#184A3E"
+    },
+    {
+      "name": "Sage",
+      "hex": "#9DBDB1"
+    },
+    {
+      "name": "Fog",
+      "hex": "#E6F0EB"
+    },
+    {
+      "name": "Saffron",
+      "hex": "#F4B637"
+    },
+    {
+      "name": "Saffron Deep",
+      "hex": "#D9900F"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#184A3E",
+    "bottom": "#0A1F1A"
+  },
+  "wordmark_typeface": [
+    "JetBrains Mono 500",
+    "JetBrains Mono 700"
+  ]
+}

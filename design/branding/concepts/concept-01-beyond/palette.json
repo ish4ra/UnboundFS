@@ -1,0 +1,43 @@
+{
+  "concept": "Concept 01",
+  "name": "Beyond",
+  "palette": "Graphite & Mint",
+  "colors": [
+    {
+      "name": "Graphite",
+      "hex": "#15181B"
+    },
+    {
+      "name": "Graphite 2",
+      "hex": "#2C3338"
+    },
+    {
+      "name": "Slate",
+      "hex": "#55615F"
+    },
+    {
+      "name": "Mist",
+      "hex": "#B9C3C0"
+    },
+    {
+      "name": "Frost",
+      "hex": "#EEF3F1"
+    },
+    {
+      "name": "Mint",
+      "hex": "#5FE3B0"
+    },
+    {
+      "name": "Mint Deep",
+      "hex": "#13A673"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#2C3338",
+    "bottom": "#15181B"
+  },
+  "wordmark_typeface": [
+    "Manrope 500",
+    "Manrope 700"
+  ]
+}

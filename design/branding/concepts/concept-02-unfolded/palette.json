@@ -1,0 +1,43 @@
+{
+  "concept": "Concept 02",
+  "name": "Unfolded",
+  "palette": "Midnight & Cyan",
+  "colors": [
+    {
+      "name": "Midnight",
+      "hex": "#0A1530"
+    },
+    {
+      "name": "Navy",
+      "hex": "#15264D"
+    },
+    {
+      "name": "Steel",
+      "hex": "#33528F"
+    },
+    {
+      "name": "Periwinkle",
+      "hex": "#6F8CCB"
+    },
+    {
+      "name": "Cyan",
+      "hex": "#3DD6EB"
+    },
+    {
+      "name": "Cyan Deep",
+      "hex": "#0BA3BF"
+    },
+    {
+      "name": "Ice",
+      "hex": "#D3F4FA"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#1C3060",
+    "bottom": "#0A1530"
+  },
+  "wordmark_typeface": [
+    "Space Grotesk 500",
+    "Space Grotesk 700"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "concept": "Concept 04",
+  "name": "Keystone",
+  "palette": "Basalt & Copper",
+  "colors": [
+    {
+      "name": "Basalt",
+      "hex": "#2C2724"
+    },
+    {
+      "name": "Umber",
+      "hex": "#5A4F48"
+    },
+    {
+      "name": "Clay",
+      "hex": "#DED3C3"
+    },
+    {
+      "name": "Sandstone",
+      "hex": "#F4EFE7"
+    },
+    {
+      "name": "Copper",
+      "hex": "#C4643A"
+    },
+    {
+      "name": "Copper Light",
+      "hex": "#E08657"
+    }
+  ],
+  "app_icon_background": {
+    "top": "#F4EFE7",
+    "bottom": "#DED3C3"
+  },
+  "wordmark_typeface": [
+    "Outfit 400",
+    "Outfit 600"
+  ]
+}
